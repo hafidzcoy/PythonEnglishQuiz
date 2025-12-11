@@ -17,7 +17,12 @@ def question(Question, Answerr):
         continue_or_stop=input('do you want to continue the game? type yes/no: ')
         if continue_or_stop == "yes":
             #clean the terminal
-            os.system('clear')
+            #Command for windows
+            if platform.system() == "Windows":
+                os.system('cls')
+            #Command for Linux/Mac
+            else:
+                os.system('clear')
             #riset score
             Score -= Score
             #recall the program
@@ -29,7 +34,7 @@ def question(Question, Answerr):
             print(f"The Score is {Score}")
             #close the programm
             exit()
-        
+
 
 
 #Questions
@@ -119,7 +124,7 @@ def looping():
     question(quess9, ask9)
     question(quess10, ask10)
     question(quess11, ask11)
-    question(quess12, ask13)
+    question(quess12, ask12)
     question(quess13, ask13)
     question(quess14, ask14)
     question(quess15, ask15)
